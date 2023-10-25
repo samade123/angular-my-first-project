@@ -9,6 +9,11 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 // export class AppComponent implements OnInit, OnDestroy {
   export class AppComponent {
 
+  showText = false;
+
   todaysDate = new Date();
+  toggleText(): void {
+    this.showText = !this.showText
+  }
 
 }
