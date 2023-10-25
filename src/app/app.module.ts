@@ -10,6 +10,7 @@ import { AppSizerComponent } from './app-sizer/app-sizer.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HighlightDirective } from './highlight.directive';
+import { LogService } from './log.service';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { HighlightDirective } from './highlight.directive';
     FormsModule,
     CommonModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

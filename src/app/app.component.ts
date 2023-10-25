@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation, Renderer2, ElementRef } from '@angular/core';
+import { LogService } from './log.service';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,16 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 // export class AppComponent implements OnInit, OnDestroy {
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  constructor(private logService: LogService,
+    private renderer: Renderer2,
+    private host: ElementRef) {}
   title = 'my-first-project';
-  fontSizepx = 16;
-  firstExample = '';
 
-  items = [{ name: 'hey' }, { name: 'hey' }, { name: 'hey' }];
-
-  familyMember = {name: "John"}
-
-  callPhone(phone: string) {
-    console.log(phone);
+  ngOnInit(): void {
+      this.logService.logMessage('Hello');
+      this.renderer.setStyle(this.host.nativeElement, 'color', 'red')
   }
+
 }
