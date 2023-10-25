@@ -1,11 +1,25 @@
-<h1>Hello world</h1>
+<h2>Template driven form</h2>
+<div [hidden]="!submitted">
+  <p>{{model|json}}</p>
+<button type="button" (click)="submitted=false">Edit</button>
+</div>
+<div [hidden]="submitted">
+  <form #petForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" required [(ngModel)]="model.name" name="name">
+    </div>
 
-<nav>
-  <ul>
-    <li><a routerLink="/first-component/1" >first-component</a></li>
-    <li><a routerLink="/second-component" >second-component</a></li>
+    <div>
+      <label for="specie">Name</label>
+      <select type="text" id="specie" required [(ngModel)]="model.specie" name="specie">
+        <option *ngFor="let specie of species" [value]="specie">{{specie}}</option>
+      </select>
+    </div>
 
-  </ul>
-</nav>
+    <button [disabled]="!petForm.form.valid" type="submit">Submit</button>
+  </form>
+</div>
+<br>
 
-<router-outlet></router-outlet>
+<h2>Reactive forms</h2>

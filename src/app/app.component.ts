@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation, Renderer2, ElementRef } from '@angular/core';
-import { LogService } from './log.service';
+import { Pet } from './pet/pet.module';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +8,13 @@ import { LogService } from './log.service';
   encapsulation: ViewEncapsulation.None,
 })
 // export class AppComponent implements OnInit, OnDestroy {
-export class AppComponent implements OnInit{
+export class AppComponent {
 
-  constructor(private logService: LogService,
-    private renderer: Renderer2,
-    private host: ElementRef) {}
-  title = 'my-first-project';
+  species = ['fish', 'cat', 'dog'];
+  model = new Pet(1, 'Goldie', this.species[0])
 
-  ngOnInit(): void {
-      this.logService.logMessage('Hello');
-      this.renderer.setStyle(this.host.nativeElement, 'color', 'red')
+  submitted = false
+  onSubmit() {
+    this.submitted = true;
   }
-
 }
