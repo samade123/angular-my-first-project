@@ -1,9 +1,32 @@
 <app-sizer [(size)]="fontSizepx"></app-sizer>
 <div [style.font-size.px]="fontSizepx">Resizible Text</div>
 
+<main>
+  <h2>Template variable examples</h2>
+  <input #phone placeholder="phone" />
+  <button (click)="callPhone(phone.value)">Call</button>
 
-<input #phone placeholder="phone"/>
-<button (click)="callPhone(phone.value)">Call</button>
+  <input #ref1 type="text" [(ngModel)]="firstExample" />
+  <span *ngIf="true">{{ref1.value}}</span>
 
 
+  <ng-template [ngIf]="true">
+    <span>{{ref1.value}}</span>
+  </ng-template>
+</main>
 
+<style>
+  main {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  input:nth-of-type(2) {
+    grid-column: span 2;
+  }
+
+  :is(h1, h2, h3, h4) {
+    grid-column: span 3;
+
+  }
+</style>

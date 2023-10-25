@@ -7,6 +7,8 @@ import { HelloWorldComponent } from './hello-world.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { AppSizerComponent } from './app-sizer/app-sizer.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { AppSizerComponent } from './app-sizer/app-sizer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

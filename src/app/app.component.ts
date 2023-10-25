@@ -11,6 +11,7 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 
   title = 'my-first-project';
   fontSizepx = 16;
+  firstExample='';
 
   callPhone(phone: string) {
     console.log(phone)
