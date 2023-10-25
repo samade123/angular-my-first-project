@@ -11,7 +11,7 @@
 
 
   <ng-template [ngIf]="true">
-    <span>{{ref1.value}}</span>
+    <span appHighlight>{{ref1.value}}</span>
   </ng-template>
 </main>
 
@@ -21,6 +21,7 @@
     gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   input:nth-of-type(2) {
     grid-column: span 2;
   }

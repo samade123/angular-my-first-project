@@ -9,6 +9,7 @@ import { ParentComponent } from './parent/parent.component';
 import { AppSizerComponent } from './app-sizer/app-sizer.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CommonModule } from '@angular/common';
     ChildComponent,
     ParentComponent,
     AppSizerComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
