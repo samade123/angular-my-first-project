@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HighlightDirective } from './highlight.directive';
 import { LogService } from './log.service';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { LogService } from './log.service';
     ParentComponent,
     AppSizerComponent,
     HighlightDirective,
+    FirstComponent,
+    SecondComponent,
   ],
   imports: [
     BrowserModule,
