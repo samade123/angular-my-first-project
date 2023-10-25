@@ -10,18 +10,6 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
   export class AppComponent {
 
   title = 'my-first-project';
-  intervalSub: ReturnType<typeof setInterval>;
-
-  // ngOnInit(): void {
-  //     this.intervalSub = setInterval(()=> {
-  //       console.log("Hello from ngOnInint")
-  //     }, 1000)
-  // }
-
-  // ngOnDestroy(): void {
-  //     if(this.intervalSub){
-  //       clearInterval(this.intervalSub)
-  //     }
-  // }
+  fontSizepx = 16;
 
 }

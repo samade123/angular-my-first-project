@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { AppSizerComponent } from './app-sizer/app-sizer.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ParentComponent } from './parent/parent.component';
     HelloWorldComponent,
     ChildComponent,
     ParentComponent,
+    AppSizerComponent,
   ],
   imports: [
     BrowserModule,
