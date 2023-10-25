@@ -10,9 +10,12 @@
   <span *ngIf="true">{{ref1.value}}</span>
 
 
-  <ng-template [ngIf]="true">
-    <span appHighlight>{{ref1.value}}</span>
-  </ng-template>
+  <!-- <ng-template [ngIf]="true">
+    <span [appHighlight]="'red'" >{{ref1.value}}</span>
+  </ng-template> -->
+
+  <span [appHighlight]="'red'" >,n m, m,</span>
+
 </main>
 
 <style>
