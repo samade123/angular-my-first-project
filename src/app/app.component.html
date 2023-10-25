@@ -9,12 +9,22 @@
   <input #ref1 type="text" [(ngModel)]="firstExample" />
   <span *ngIf="true">{{ref1.value}}</span>
 
+  <ul>
+    <li *ngFor="let item of items">
+      {{item.name}}
+    </li>
+  </ul>
+
+  <div [ngSwitch]="familyMember.name">
+    <span *ngSwitchCase="'John'">Hey Users</span>
+  </div>
+
 
   <!-- <ng-template [ngIf]="true">
     <span [appHighlight]="'red'" >{{ref1.value}}</span>
   </ng-template> -->
 
-  <span [appHighlight]="'red'" >,n m, m,</span>
+  <span [appHighlight]="'red'">,n m, m,</span>
 
 </main>
 

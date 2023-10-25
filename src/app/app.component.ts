@@ -4,17 +4,19 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 // export class AppComponent implements OnInit, OnDestroy {
-  export class AppComponent {
-
+export class AppComponent {
   title = 'my-first-project';
   fontSizepx = 16;
-  firstExample='';
+  firstExample = '';
+
+  items = [{ name: 'hey' }, { name: 'hey' }, { name: 'hey' }];
+
+  familyMember = {name: "John"}
 
   callPhone(phone: string) {
-    console.log(phone)
+    console.log(phone);
   }
-
 }
