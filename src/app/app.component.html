@@ -23,3 +23,19 @@
 <br>
 
 <h2>Reactive forms</h2>
+
+<form action="">
+  <label for="name">Name: </label>
+  <input type="text" name="" id="name" [formControl]="name">
+  <p>Value: {{name.value}}</p>
+  <button type="button" (click)="updateName()">Nancy</button>
+</form>
+
+<h2>Reactive Form with formgroup</h2>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmitTwo()">
+  <label for="first-name">First Name</label>
+  <input type="text" id="first-name" formControlName="firstName" required>
+  <label for="last-name">last Name</label>
+  <input type="number" id="last-name" formControlName="lastName" required>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>

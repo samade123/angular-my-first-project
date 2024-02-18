@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation, Renderer2, ElementRef } from '@angular/core';
 import { Pet } from './pet/pet.module';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,21 @@ export class AppComponent {
   submitted = false
   onSubmit() {
     this.submitted = true;
+  }
+
+  name =  new FormControl('');
+
+  updateName() {
+    this.name.setValue('nancy');
+  }
+
+
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  })
+
+  onSubmitTwo() {
+    console.log(this.profileForm)
   }
 }
